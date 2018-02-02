@@ -102,6 +102,7 @@ namespace PKHeX.Core
                     case "Shiny": { Shiny = brokenline[1].Trim() == "Yes"; break; }
                     case "Happiness": { if (int.TryParse(brokenline[1].Trim(), out int val)) Friendship = val; else InvalidLines.Add(line); break; }
                     case "Nature": { Nature = Array.IndexOf(natures, brokenline[1].Trim()); break; }
+                    case "Language": { Language = Array.IndexOf(languages, brokenline[1].Trim()); break; }
                     case "EV":
                     case "EVs": { ParseLineEVs(brokenline[1].Trim()); break; }
                     case "IV":
